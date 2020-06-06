@@ -5,9 +5,18 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Migrations\20200605230245_AddDoctor.cs" />
+      <Compile Remove="Migrations\20200605230245_AddDoctor.Designer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
 
