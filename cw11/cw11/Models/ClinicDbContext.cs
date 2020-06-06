@@ -28,6 +28,12 @@ namespace cw11.Models
             modelBuilder.ApplyConfiguration(new MedicamentEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PrescriptionEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PrescriptionMedicamentEntityTypeConfiguration());
+            
+            modelBuilder.Entity<Doctor>().HasData(DataGenerator.GenerateDoctors());
+            modelBuilder.Entity<Patient>().HasData(DataGenerator.GeneratePatients());
+            modelBuilder.Entity<Prescription>().HasData(DataGenerator.GeneratePrescriptions());
+            modelBuilder.Entity<Medicament>().HasData(DataGenerator.GenerateMedicaments());
+            modelBuilder.Entity<PrescriptionMedicament>().HasData(DataGenerator.GeneratePrescriptionMedicaments());
         }
     }
 }
